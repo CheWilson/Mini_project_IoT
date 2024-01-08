@@ -1,0 +1,524 @@
+[
+    {
+        "id": "b105e76a93c99b2c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0bd1965d27ae579e",
+        "type": "inject",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "3a5aadc08a565bd3"
+            ]
+        ]
+    },
+    {
+        "id": "3a5aadc08a565bd3",
+        "type": "Container",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "platform": "65cd2c51b23f845b",
+        "name1": "104ea76b6c0cf010",
+        "viewtype": "autre",
+        "viewunid1": "Hospital_Room_01",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "a52be99d1f3b6252"
+            ]
+        ]
+    },
+    {
+        "id": "a52be99d1f3b6252",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f720d013bc242ba1",
+        "type": "inject",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "78ea24e0c9e9aba8"
+            ]
+        ]
+    },
+    {
+        "id": "78ea24e0c9e9aba8",
+        "type": "Container",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "platform": "65cd2c51b23f845b",
+        "name1": "104ea76b6c0cf010",
+        "viewtype": "autre",
+        "viewunid1": "Hospital_Room_02",
+        "x": 440,
+        "y": 220,
+        "wires": [
+            [
+                "f48ae5f52d28ca29"
+            ]
+        ]
+    },
+    {
+        "id": "f48ae5f52d28ca29",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4a577faa7d9f496c",
+        "type": "inject",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "459827107bde0768"
+            ]
+        ]
+    },
+    {
+        "id": "459827107bde0768",
+        "type": "Container",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "platform": "65cd2c51b23f845b",
+        "name1": "104ea76b6c0cf010",
+        "viewtype": "autre",
+        "viewunid1": "Hospital_Room_03",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "cf60e6febd5ed066"
+            ]
+        ]
+    },
+    {
+        "id": "cf60e6febd5ed066",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "858a3b8d2354e017",
+        "type": "function",
+        "z": "b105e76a93c99b2c",
+        "name": "function 11",
+        "func": "var data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n <cnf>message</cnf>\\\n <con>\\\n   &lt;obj&gt;\\\n  &lt;str name=&quot;body_temperature &quot; val=&quot;'+ msg.payload.body_temperature + '&quot;/&gt;\\\n  &lt;str name=&quot;heart_rate&quot; val=&quot;'+ msg.payload.heart_rate + '&quot;/&gt;\\\n  &lt;str name=&quot;blood_pressure &quot; val=&quot;'+ msg.payload.blood_pressure + '&quot;/&gt;\\\n  &lt;str name=&quot;oxygen_saturation&quot; val=&quot;'+ msg.payload.oxygen_saturation + '&quot;/&gt;\\\n   &lt;/obj&gt;\\\n </con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "ed7039038a5530af",
+                "df9452133d71a44c"
+            ]
+        ]
+    },
+    {
+        "id": "ed161cfe227229d3",
+        "type": "http in",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "url": "/sensorData1",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "858a3b8d2354e017"
+            ]
+        ]
+    },
+    {
+        "id": "ed7039038a5530af",
+        "type": "http request",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8282/~/mn-cse/mn-name/hospital/Hospital_Room_01",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 460,
+        "wires": [
+            [
+                "15f92a61cae105b2",
+                "3e6d7e7adfaed15e"
+            ]
+        ]
+    },
+    {
+        "id": "15f92a61cae105b2",
+        "type": "http response",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3e6d7e7adfaed15e",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "df9452133d71a44c",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "67dcd00f95673e46",
+        "type": "function",
+        "z": "b105e76a93c99b2c",
+        "name": "function 12",
+        "func": "var data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n <cnf>message</cnf>\\\n <con>\\\n   &lt;obj&gt;\\\n  &lt;str name=&quot;body_temperature &quot; val=&quot;'+ msg.payload.body_temperature + '&quot;/&gt;\\\n  &lt;str name=&quot;heart_rate&quot; val=&quot;'+ msg.payload.heart_rate + '&quot;/&gt;\\\n  &lt;str name=&quot;blood_pressure &quot; val=&quot;'+ msg.payload.blood_pressure + '&quot;/&gt;\\\n  &lt;str name=&quot;oxygen_saturation&quot; val=&quot;'+ msg.payload.oxygen_saturation + '&quot;/&gt;\\\n   &lt;/obj&gt;\\\n </con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 640,
+        "wires": [
+            [
+                "8732ef9f428c976c",
+                "bd404db67a967dd9"
+            ]
+        ]
+    },
+    {
+        "id": "13bfdfcbe1690221",
+        "type": "http in",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "url": "/sensorData2",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "67dcd00f95673e46"
+            ]
+        ]
+    },
+    {
+        "id": "8732ef9f428c976c",
+        "type": "http request",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8282/~/mn-cse/mn-name/hospital/Hospital_Room_02",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 640,
+        "wires": [
+            [
+                "a917f955c5f0f010",
+                "f3acfcc5b8023f8e"
+            ]
+        ]
+    },
+    {
+        "id": "a917f955c5f0f010",
+        "type": "http response",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "f3acfcc5b8023f8e",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "bd404db67a967dd9",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 43",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "97cd9213d313c22f",
+        "type": "function",
+        "z": "b105e76a93c99b2c",
+        "name": "function 13",
+        "func": "var data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n <cnf>message</cnf>\\\n <con>\\\n   &lt;obj&gt;\\\n  &lt;str name=&quot;body_temperature &quot; val=&quot;'+ msg.payload.body_temperature + '&quot;/&gt;\\\n  &lt;str name=&quot;heart_rate&quot; val=&quot;'+ msg.payload.heart_rate + '&quot;/&gt;\\\n  &lt;str name=&quot;blood_pressure &quot; val=&quot;'+ msg.payload.blood_pressure + '&quot;/&gt;\\\n  &lt;str name=&quot;oxygen_saturation&quot; val=&quot;'+ msg.payload.oxygen_saturation + '&quot;/&gt;\\\n   &lt;/obj&gt;\\\n </con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 820,
+        "wires": [
+            [
+                "b99aaacd6e9203eb",
+                "24e8c9ec769341a4"
+            ]
+        ]
+    },
+    {
+        "id": "eda68db662e12c70",
+        "type": "http in",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "url": "/sensorData3",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 820,
+        "wires": [
+            [
+                "97cd9213d313c22f"
+            ]
+        ]
+    },
+    {
+        "id": "b99aaacd6e9203eb",
+        "type": "http request",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8282/~/mn-cse/mn-name/hospital/Hospital_Room_03",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 820,
+        "wires": [
+            [
+                "1490f0135110cb8d",
+                "d948457b765e0ca3"
+            ]
+        ]
+    },
+    {
+        "id": "1490f0135110cb8d",
+        "type": "http response",
+        "z": "b105e76a93c99b2c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "d948457b765e0ca3",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "24e8c9ec769341a4",
+        "type": "debug",
+        "z": "b105e76a93c99b2c",
+        "name": "debug 45",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "65cd2c51b23f845b",
+        "type": "xN_CSE",
+        "platform": "mn-cse",
+        "URLBase": "http://127.0.0.1:8282/~/mn-cse/mn-name",
+        "user": "admin",
+        "password": "admin"
+    },
+    {
+        "id": "104ea76b6c0cf010",
+        "type": "AE",
+        "appId": "hospital"
+    }
+]

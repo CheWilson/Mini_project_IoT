@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "921610a9-84e9-415e-8e67-883e1ff9bdec",
+		"name": "mini_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30668680"
+	},
+	"item": [
+		{
+			"name": "create_ae_in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:ae xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"hospital\">\n    <api>application</api>\n    <lbl>Location/hospital</lbl>\n    <rr>True</rr>\n</m2m:ae>\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/~/in-cse",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"~",
+						"in-cse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_ae_mn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:ae xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"hospital\">\n    <api>application</api>\n    <lbl>Location/hospital</lbl>\n    <rr>True</rr>\n</m2m:ae>",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_sub_in_room1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=23",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:sub xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"SUBSCRIPION_IN\">\n    <nu>http://127.0.0.1:8080/~/in-cse/in-name/hospital/Hospital_Room_01</nu>\n    <nct>2</nct>\n</m2m:sub>"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/hospital/Hospital_Room_01",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"hospital",
+						"Hospital_Room_01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_sub_in_room2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=23",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:sub xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"SUBSCRIPION_IN\">\n    <nu>http://127.0.0.1:8080/~/in-cse/in-name/hospital/Hospital_Room_02</nu>\n    <nct>2</nct>\n</m2m:sub>"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/hospital/Hospital_Room_02",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"hospital",
+						"Hospital_Room_02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_sub_in_room3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=23",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:sub xmlns:m2m=\"http://www.onem2m.org/xml/protocols\" rn=\"SUBSCRIPION_IN\">\n    <nu>http://127.0.0.1:8080/~/in-cse/in-name/hospital/Hospital_Room_03</nu>\n    <nct>2</nct>\n</m2m:sub>"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/hospital/Hospital_Room_03",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"hospital",
+						"Hospital_Room_03"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_con_data_room1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\n    <cnf>message</cnf>\n    <con>\n        &lt;obj&gt;\n            &lt;float name=\"Body Temperature\" val=\"36\"/&gt;\n            &lt;float name=\"Heart Rate\" val=\"100\"/&gt;\n            &lt;int name=\"Blood Pressure\" val=\"27\"/&gt;\n            &lt;float name=\"Oxygen Saturation\" val=\"98\"/&gt;\n        &lt;/obj&gt;\n    </con>\n</m2m:cin>"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/hospital/Hospital_Room_01",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"hospital",
+						"Hospital_Room_01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_con_data_room2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\n    <cnf>message</cnf>\n    <con>\n      &lt;obj&gt;\n        &lt;int name=&quot;ID&quot; val=&quot;NE6121131&quot;/&gt;\n      &lt;/obj&gt;\n    </con>\n</m2m:cin>"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/MY_SENSOR/DATA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"MY_SENSOR",
+						"DATA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_con_data_room3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-M2M-Origin",
+						"value": "admin:admin",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml;ty=4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\n    <cnf>message</cnf>\n    <con>\n      &lt;obj&gt;\n        &lt;int name=&quot;ID&quot; val=&quot;NE6121131&quot;/&gt;\n      &lt;/obj&gt;\n    </con>\n</m2m:cin>"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8282/~/mn-cse/mn-name/MY_SENSOR/DATA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8282",
+					"path": [
+						"~",
+						"mn-cse",
+						"mn-name",
+						"MY_SENSOR",
+						"DATA"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
